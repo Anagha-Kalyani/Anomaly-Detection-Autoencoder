@@ -2,6 +2,36 @@
 
 The dataset contains satellite health monitoring data collected by the Indian Space Research Organisation (ISRO). This data provides insights into the status and parameters of a satellite, enabling the assessment of its overall health and performance. The dataset comprises observations recorded over a period of time, with a focus on various analog and digital parameters.
 
+The data consists of the following columns:
+Year: The year of the observation.
+Day of the Year: The day of the year when the observation was recorded.
+Hour: The hour of the observation (in 24-hour format).
+Minute: The minute of the observation.
+Second: The second of the observation.
+Millisecond: The millisecond of the observation.
+Microsecond: The microsecond of the observation.
+DTG-1_PCH_ANALOG_RAT (Analog): Measurement related to the pitch of the satellite.
+DTG-1_ROL_ANALOG_RAT (Analog): Measurement related to the roll of the satellite.
+DTG-1_PCH_FINE_RATE (Analog): Fine-rate measurement associated with pitch.
+DTG-1_ROL_FINE_RATE (Analog): Fine-rate measurement associated with roll.
+DTG-2_YAW_ANALOG_RAT (Analog): Measurement related to the yaw of the satellite.
+DTG-2_PCH_ANALOG_RAT (Analog): Measurement related to the pitch of the satellite.
+DTG-2_YAW_FINE_RATE (Analog): Fine-rate measurement associated with yaw.
+DTG-2_PCH_FINE_RATE (Analog): Fine-rate measurement associated with pitch.
+DTG-1_TH_TEMP (Analog): Temperature measurement related to satellite components.
+DTG-1_ELECTRONICS_TH (Analog): Temperature measurement related to satellite electronics.
+DTG-2_TH_TEMP (Analog): Temperature measurement related to satellite components.
+DTG-2_ELECTRONICS_TH (Analog): Temperature measurement related to satellite electronics.
+DTG-2_SYNC_STS (Digital): Synchronization status of the satellite.
+DTG-2_ON_STS (Digital): Status indicating whether a specific component is active.
+DTG-1_ON_STS (Digital): Status indicating whether another component is active.
+DTG-2_RB_SUPPLY_STS (Digital): Status related to power supply to satellite components.
+DTG-1_SYNC_STS (Digital): Synchronization status of another component.
+DTG-3_USBL_STS (Digital): Status indicating whether another system is active.
+DTG_ANALOG_RATE_CHK (Digital): Status related to analog rate checking.
+DTG-2_TEMP_SEL_CMD_S (Digital): Command status related to temperature selection.
+DTG-1_RB_SUPPLY_STS (Digital): Status related to power supply to another set of components.
+
 This implementation combines data preprocessing techniques with an autoencoder neural network for anomaly detection. The key steps involve cleaning and transforming the input data, designing an autoencoder architecture, training the model, and detecting anomalies based on reconstruction errors.
 
 Data Preprocessing
@@ -15,6 +45,34 @@ Data Conversion:  The data includes date and time information which is initially
 Label Encoding: Columns with digital values are encoded using label encoding. This transformation converts categorical digital values into numerical labels, making them suitable for machine learning  and deep learning algorithms.
 
 Feature Scaling: Numeric features are scaled using Min-Max scaling to ensure that all features have a similar scale, which helps in training the autoencoder more effectively.
+
+The data now has the following columns: 
+
+Data columns (total 22 columns):
+ #   Column                          Non-Null Count   Dtype  
+---  ------                          --------------   -----  
+ 0   Datetime                        186298 non-null  object 
+ 1   DTG-1_PCH_ANALOG_RAT (Analog)   186298 non-null  float64
+ 2   DTG-1_ROL_ANALOG_RAT (Analog)   186298 non-null  float64
+ 3   DTG-1_PCH_FINE_RATE (Analog)    186298 non-null  float64
+ 4   DTG-1_ROL_FINE_RATE (Analog)    186298 non-null  float64
+ 5   DTG-2_YAW_ANALOG_RAT (Analog)   186298 non-null  float64
+ 6   DTG-2_PCH_ANALOG_RAT (Analog)   186298 non-null  float64
+ 7   DTG-2_YAW_FINE_RATE (Analog)    186298 non-null  float64
+ 8   DTG-2_PCH_FINE_RATE (Analog)    186298 non-null  float64
+ 9   DTG-1_TH_TEMP (Analog)          186298 non-null  float64
+ 10  DTG-1_ELECTRONICS_TH (Analog)   186298 non-null  float64
+ 11  DTG-2_TH_TEMP (Analog)          186298 non-null  float64
+ 12  DTG-2_ELECTRONICS_TH (Analog)   186298 non-null  float64
+ 13  DTG-2_SYNC_STS (Digital)        186298 non-null  int64  
+ 14  DTG-2_ON_STS (Digital)          186298 non-null  int64  
+ 15  DTG-1_ON_STS (Digital)          186298 non-null  int64  
+ 16  DTG-2_RB_SUPPLY_STS (Digital)   186298 non-null  int64  
+ 17  DTG-1_SYNC_STS (Digital)        186298 non-null  int64  
+ 18  DTG-3_USBL_STS (Digital)        186298 non-null  int64  
+ 19  DTG_ANALOG_RATE_CHK (Digital)   186298 non-null  int64  
+ 20  DTG-2_TEMP_SEL_CMD_S (Digital)  186298 non-null  int64  
+ 21  DTG-1_RB_SUPPLY_STS (Digital)   186298 non-null  int64  
 
 Anomaly Detection using Autoencoder
 
