@@ -48,31 +48,28 @@ Feature Scaling: Numeric features are scaled using Min-Max scaling to ensure tha
 
 The data now has the following columns: 
 
-Data columns (total 22 columns):
-No.   Column                          Non-Null Count   Dtype  
----  ------                          --------------   -----  
- 0   Datetime                        186298 non-null  object 
- 1   DTG-1_PCH_ANALOG_RAT (Analog)   186298 non-null  float64
- 2   DTG-1_ROL_ANALOG_RAT (Analog)   186298 non-null  float64
- 3   DTG-1_PCH_FINE_RATE (Analog)    186298 non-null  float64
- 4   DTG-1_ROL_FINE_RATE (Analog)    186298 non-null  float64
- 5   DTG-2_YAW_ANALOG_RAT (Analog)   186298 non-null  float64
- 6   DTG-2_PCH_ANALOG_RAT (Analog)   186298 non-null  float64
- 7   DTG-2_YAW_FINE_RATE (Analog)    186298 non-null  float64
- 8   DTG-2_PCH_FINE_RATE (Analog)    186298 non-null  float64
- 9   DTG-1_TH_TEMP (Analog)          186298 non-null  float64
- 10  DTG-1_ELECTRONICS_TH (Analog)   186298 non-null  float64
- 11  DTG-2_TH_TEMP (Analog)          186298 non-null  float64
- 12  DTG-2_ELECTRONICS_TH (Analog)   186298 non-null  float64
- 13  DTG-2_SYNC_STS (Digital)        186298 non-null  int64  
- 14  DTG-2_ON_STS (Digital)          186298 non-null  int64  
- 15  DTG-1_ON_STS (Digital)          186298 non-null  int64  
- 16  DTG-2_RB_SUPPLY_STS (Digital)   186298 non-null  int64  
- 17  DTG-1_SYNC_STS (Digital)        186298 non-null  int64  
- 18  DTG-3_USBL_STS (Digital)        186298 non-null  int64  
- 19  DTG_ANALOG_RATE_CHK (Digital)   186298 non-null  int64  
- 20  DTG-2_TEMP_SEL_CMD_S (Digital)  186298 non-null  int64  
- 21  DTG-1_RB_SUPPLY_STS (Digital)   186298 non-null  int64  
+1. Datetime
+2. DTG-1_PCH_ANALOG_RAT (Analog)
+3. DTG-1_ROL_ANALOG_RAT (Analog)
+4. DTG-1_PCH_FINE_RATE (Analog)
+5. DTG-1_ROL_FINE_RATE (Analog)
+6. DTG-2_YAW_ANALOG_RAT (Analog)
+7. DTG-2_PCH_ANALOG_RAT (Analog)
+8. DTG-2_YAW_FINE_RATE (Analog)
+9. DTG-2_PCH_FINE_RATE (Analog)
+10. DTG-1_TH_TEMP (Analog)
+11. DTG-1_ELECTRONICS_TH (Analog)
+12. DTG-2_TH_TEMP (Analog)
+13. DTG-2_ELECTRONICS_TH (Analog)
+14. DTG-2_SYNC_STS (Digital)
+15. DTG-2_ON_STS (Digital)
+16. DTG-1_ON_STS (Digital)
+17. DTG-2_RB_SUPPLY_STS (Digital)
+18. DTG-1_SYNC_STS (Digital)
+19. DTG-3_USBL_STS (Digital)
+20. DTG_ANALOG_RATE_CHK (Digital)
+21. DTG-2_TEMP_SEL_CMD_S (Digital)
+22. DTG-1_RB_SUPPLY_STS (Digital) 
 
 Anomaly Detection using Autoencoder
 
