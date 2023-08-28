@@ -1,9 +1,5 @@
 # Anomaly-Detection-Autoencoder
 
-DATASET DESCRIPTION
-
-Satellite Health Monitoring Data
-
 The dataset contains satellite health monitoring data collected by the Indian Space Research Organisation (ISRO). This data provides insights into the status and parameters of a satellite, enabling the assessment of its overall health and performance. The dataset comprises observations recorded over a period of time, with a focus on various analog and digital parameters.
 
 This implementation combines data preprocessing techniques with an autoencoder neural network for anomaly detection. The key steps involve cleaning and transforming the input data, designing an autoencoder architecture, training the model, and detecting anomalies based on reconstruction errors.
